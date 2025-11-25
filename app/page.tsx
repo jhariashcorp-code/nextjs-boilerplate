@@ -1,7 +1,8 @@
- "use client";
+"use client";
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import LogosSlider from "./LogosSlider";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -106,10 +107,10 @@ export default function Home() {
               className="mt-4 max-w-xl text-sm md:text-base leading-relaxed text-slate-300"
               variants={fadeUpDelayed(0.2)}
             >
-              Evaluamos la superficie externa de tus aplicaciones (TLS/SSL, cabeceras
-              de seguridad, CSP, DNS, exposición de servicios y OWASP/CIS) y lo
-              traducimos en un informe ejecutivo y técnico listo para presentar a
-              clientes, auditorías, SOC o gerencias.
+              Evaluamos la superficie externa de tus aplicaciones (TLS/SSL,
+              cabeceras de seguridad, CSP, DNS, exposición de servicios y
+              OWASP/CIS) y lo traducimos en un informe ejecutivo y técnico listo
+              para presentar a clientes, auditorías, SOC o gerencias.
             </motion.p>
 
             <motion.div
@@ -134,8 +135,8 @@ export default function Home() {
               className="mt-4 text-xs text-slate-500"
               variants={fadeUpDelayed(0.4)}
             >
-              Basado en herramientas reconocidas (SSL Labs, análisis de cabeceras,
-              CSP, DNS) + experiencia en ciberseguridad.
+              Basado en herramientas reconocidas (SSL Labs, análisis de
+              cabeceras, CSP, DNS) + experiencia en ciberseguridad.
             </motion.p>
           </div>
 
@@ -145,15 +146,17 @@ export default function Home() {
             variants={scaleIn}
             whileHover={{ y: -4, boxShadow: "0 20px 45px rgba(15,23,42,0.9)" }}
           >
-            <p className="text-xs font-semibold text-sky-400">Ejemplo de resultado</p>
+            <p className="text-xs font-semibold text-sky-400">
+              Ejemplo de resultado
+            </p>
             <h2 className="mt-2 text-sm font-medium text-slate-100">
               Auditoría externa de sitio corporativo
             </h2>
 
             <p className="mt-3 text-xs text-slate-400 leading-relaxed">
-              • Calificación TLS/SSL: <span className="text-emerald-400">B</span> con
-              recomendaciones para subir a{" "}
-              <span className="text-emerald-400">A+</span>.<br />
+              • Calificación TLS/SSL:{" "}
+              <span className="text-emerald-400">B</span> con recomendaciones
+              para subir a <span className="text-emerald-400">A+</span>.<br />
               • Cabeceras de seguridad: HSTS, CSP, XFO, XCTO, Referrer-Policy,
               Permissions-Policy configuradas correctamente.<br />
               • DNS y superficie pública: sin exposición de backend ni rutas
@@ -164,7 +167,9 @@ export default function Home() {
             <div className="mt-4 grid grid-cols-3 gap-3 text-center text-xs">
               <div className="rounded-xl border border-emerald-500/30 bg-emerald-500/10 px-2 py-3">
                 <p className="text-[11px] text-slate-300">Sitios auditados</p>
-                <p className="mt-1 text-base font-semibold text-emerald-300">10+</p>
+                <p className="mt-1 text-base font-semibold text-emerald-300">
+                  10+
+                </p>
               </div>
               <div className="rounded-xl border border-sky-500/30 bg-sky-500/10 px-2 py-3">
                 <p className="text-[11px] text-slate-300">Enfoque</p>
@@ -174,10 +179,26 @@ export default function Home() {
               </div>
               <div className="rounded-xl border border-amber-500/30 bg-amber-500/10 px-2 py-3">
                 <p className="text-[11px] text-slate-300">Entrega</p>
-                <p className="mt-1 text-base font-semibold text-amber-300">3–5 días</p>
+                <p className="mt-1 text-base font-semibold text-amber-300">
+                  3–5 días
+                </p>
               </div>
             </div>
           </motion.div>
+        </motion.section>
+
+        {/* SLIDER ANIMADO CERTIFICACIONES (SECCIÓN NUEVA) */}
+        <motion.section
+          className="w-full overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/60 px-4 py-8"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.4 }}
+          variants={fadeUp}
+        >
+          <p className="mb-4 text-center text-[11px] font-semibold uppercase tracking-[0.25em] text-slate-400">
+            ESTÁNDARES Y MARCOS QUE UTILIZAMOS
+          </p>
+          <LogosSlider />
         </motion.section>
 
         {/* CERTIFICACIONES */}
@@ -195,8 +216,8 @@ export default function Home() {
 
           <p className="max-w-3xl text-sm md:text-base text-slate-300 leading-relaxed">
             BITS Company basa sus evaluaciones en estándares reconocidos de la
-            industria, alineando los informes y recomendaciones con marcos como:
-            ISO/IEC 27001, ISO/IEC 22301, OWASP y CIS Controls.
+            industria, alineando los informes y recomendaciones con marcos
+            como: ISO/IEC 27001, ISO/IEC 22301, OWASP y CIS Controls.
           </p>
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
@@ -262,9 +283,9 @@ export default function Home() {
           </div>
 
           <p className="text-xs text-slate-500">
-            Los logos representan los estándares y marcos de referencia utilizados en
-            las evaluaciones; la prestación del servicio se centra en auditorías y
-            generación de informes profesionales.
+            Los logos representan los estándares y marcos de referencia
+            utilizados en las evaluaciones; la prestación del servicio se
+            centra en auditorías y generación de informes profesionales.
           </p>
         </motion.section>
 
@@ -282,9 +303,9 @@ export default function Home() {
           </h2>
 
           <p className="max-w-3xl text-sm md:text-base text-slate-300">
-            Auditorías externas diseñadas para mejorar visibilidad, reputación y
-            cumplimiento, detectando riesgos reales en la superficie pública de tus
-            aplicaciones y traduciéndolos en acciones concretas.
+            Auditorías externas diseñadas para mejorar visibilidad, reputación
+            y cumplimiento, detectando riesgos reales en la superficie pública
+            de tus aplicaciones y traduciéndolos en acciones concretas.
           </p>
 
           <div className="grid gap-5 md:grid-cols-3">
@@ -293,7 +314,9 @@ export default function Home() {
               variants={scaleIn}
               whileHover={{ y: -4, borderColor: "#38bdf8" }}
             >
-              <p className="text-xs font-semibold text-sky-400">Auditoría SSL/TLS</p>
+              <p className="text-xs font-semibold text-sky-400">
+                Auditoría SSL/TLS
+              </p>
               <p className="mt-2 text-sm text-slate-100">
                 Evaluación avanzada de certificados, protocolos, cipher suites y
                 alineamiento con prácticas actuales de cifrado.
@@ -309,8 +332,8 @@ export default function Home() {
                 Seguridad de cabeceras HTTP
               </p>
               <p className="mt-2 text-sm text-slate-100">
-                Análisis y mejora de HSTS, CSP, X-Frame-Options, Referrer-Policy,
-                Permissions-Policy y otras mitigaciones clave.
+                Análisis y mejora de HSTS, CSP, X-Frame-Options,
+                Referrer-Policy, Permissions-Policy y otras mitigaciones clave.
               </p>
             </motion.div>
 
@@ -399,7 +422,9 @@ export default function Home() {
               <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
                 Plan Express
               </p>
-              <p className="mt-2 text-2xl font-semibold text-slate-50">USD 79</p>
+              <p className="mt-2 text-2xl font-semibold text-slate-50">
+                USD 79
+              </p>
               <p className="mt-2 text-sm text-slate-300">
                 Revisión única de un sitio con foco en SSL/TLS y cabeceras
                 principales. Informe breve (5–7 páginas).
@@ -458,9 +483,9 @@ export default function Home() {
           </h2>
 
           <p className="max-w-2xl text-sm md:text-base text-slate-300 leading-relaxed">
-            ¿Necesitas validar la seguridad externa de tu sitio o preparar un informe
-            profesional para un cliente, auditoría o comité directivo? Escríbenos y
-            coordinamos una evaluación a medida.
+            ¿Necesitas validar la seguridad externa de tu sitio o preparar un
+            informe profesional para un cliente, auditoría o comité directivo?
+            Escríbenos y coordinamos una evaluación a medida.
           </p>
 
           <div className="flex flex-col md:flex-row items-start md:items-center gap-4 text-sm">
@@ -494,11 +519,12 @@ export default function Home() {
         <footer className="border-t border-slate-900/80 pt-6 pb-4 text-xs text-slate-500">
           <div className="flex flex-col items-start justify-between gap-3 md:flex-row md:items-center">
             <p>
-              © {new Date().getFullYear()} BITS Company. Auditoría &amp; Seguridad.
+              © {new Date().getFullYear()} BITS Company. Auditoría &amp;
+              Seguridad.
             </p>
             <p className="text-[11px] text-slate-600">
-              Evaluaciones externas de TLS/SSL, cabeceras, CSP y DNS con informes
-              profesionales listos para auditorías y clientes.
+              Evaluaciones externas de TLS/SSL, cabeceras, CSP y DNS con
+              informes profesionales listos para auditorías y clientes.
             </p>
           </div>
         </footer>

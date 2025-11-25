@@ -81,6 +81,7 @@ export default function Home() {
 
       {/* MAIN */}
       <main className="mx-auto flex max-w-6xl flex-col gap-24 px-6 py-16 md:py-24">
+
         {/* HERO */}
         <motion.section
           className="grid gap-12 md:grid-cols-[3fr,2fr] md:items-center"
@@ -140,7 +141,7 @@ export default function Home() {
             </motion.p>
           </div>
 
-          {/* CARD EJEMPLO */}
+          {/* CARD EXAMPLE */}
           <motion.div
             className="rounded-2xl border border-slate-800 bg-slate-900/60 p-5 shadow-xl shadow-slate-900/80"
             variants={scaleIn}
@@ -187,7 +188,7 @@ export default function Home() {
           </motion.div>
         </motion.section>
 
-        {/* SLIDER ANIMADO CERTIFICACIONES (SECCIÓN NUEVA) */}
+        {/* SLIDER */}
         <motion.section
           className="w-full overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/60 px-4 py-8"
           initial="hidden"
@@ -201,7 +202,7 @@ export default function Home() {
           <LogosSlider />
         </motion.section>
 
-        {/* CERTIFICACIONES */}
+        {/* CERTIFICATIONS */}
         <motion.section
           id="certificaciones"
           className="space-y-8 pt-10 pb-12 border-t border-slate-800"
@@ -221,14 +222,14 @@ export default function Home() {
           </p>
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
-            {/* ISO 27001 */}
+
             <motion.div
               className="flex items-center justify-center rounded-xl border border-slate-700 bg-slate-900/60 p-4"
               variants={scaleIn}
               whileHover={{ y: -4, scale: 1.02, borderColor: "#38bdf8" }}
             >
               <Image
-                src="/logos/iso27001.png"
+                src="/iso27001.png"
                 alt="ISO 27001"
                 width={80}
                 height={80}
@@ -236,14 +237,13 @@ export default function Home() {
               />
             </motion.div>
 
-            {/* ISO 22301 */}
             <motion.div
               className="flex items-center justify-center rounded-xl border border-slate-700 bg-slate-900/60 p-4"
               variants={scaleIn}
               whileHover={{ y: -4, scale: 1.02, borderColor: "#38bdf8" }}
             >
               <Image
-                src="/logos/iso22301.png"
+                src="/iso22301.png"
                 alt="ISO 22301"
                 width={80}
                 height={80}
@@ -251,14 +251,13 @@ export default function Home() {
               />
             </motion.div>
 
-            {/* OWASP */}
             <motion.div
               className="flex items-center justify-center rounded-xl border border-slate-700 bg-slate-900/60 p-4"
               variants={scaleIn}
               whileHover={{ y: -4, scale: 1.02, borderColor: "#38bdf8" }}
             >
               <Image
-                src="/logos/owasp.png"
+                src="/owasp.png"
                 alt="OWASP"
                 width={80}
                 height={80}
@@ -266,14 +265,13 @@ export default function Home() {
               />
             </motion.div>
 
-            {/* CIS */}
             <motion.div
               className="flex items-center justify-center rounded-xl border border-slate-700 bg-slate-900/60 p-4"
               variants={scaleIn}
               whileHover={{ y: -4, scale: 1.02, borderColor: "#38bdf8" }}
             >
               <Image
-                src="/logos/cis.png"
+                src="/cis.png"
                 alt="CIS Controls"
                 width={80}
                 height={80}
@@ -288,247 +286,3 @@ export default function Home() {
             centra en auditorías y generación de informes profesionales.
           </p>
         </motion.section>
-
-        {/* SERVICIOS */}
-        <motion.section
-          id="servicios"
-          className="space-y-6"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={fadeUp}
-        >
-          <h2 className="text-xl font-semibold tracking-tight text-slate-50">
-            Servicios de auditoría
-          </h2>
-
-          <p className="max-w-3xl text-sm md:text-base text-slate-300">
-            Auditorías externas diseñadas para mejorar visibilidad, reputación
-            y cumplimiento, detectando riesgos reales en la superficie pública
-            de tus aplicaciones y traduciéndolos en acciones concretas.
-          </p>
-
-          <div className="grid gap-5 md:grid-cols-3">
-            <motion.div
-              className="rounded-2xl border border-slate-800 bg-slate-900/60 p-5"
-              variants={scaleIn}
-              whileHover={{ y: -4, borderColor: "#38bdf8" }}
-            >
-              <p className="text-xs font-semibold text-sky-400">
-                Auditoría SSL/TLS
-              </p>
-              <p className="mt-2 text-sm text-slate-100">
-                Evaluación avanzada de certificados, protocolos, cipher suites y
-                alineamiento con prácticas actuales de cifrado.
-              </p>
-            </motion.div>
-
-            <motion.div
-              className="rounded-2xl border border-slate-800 bg-slate-900/60 p-5"
-              variants={scaleIn}
-              whileHover={{ y: -4, borderColor: "#38bdf8" }}
-            >
-              <p className="text-xs font-semibold text-sky-400">
-                Seguridad de cabeceras HTTP
-              </p>
-              <p className="mt-2 text-sm text-slate-100">
-                Análisis y mejora de HSTS, CSP, X-Frame-Options,
-                Referrer-Policy, Permissions-Policy y otras mitigaciones clave.
-              </p>
-            </motion.div>
-
-            <motion.div
-              className="rounded-2xl border border-slate-800 bg-slate-900/60 p-5"
-              variants={scaleIn}
-              whileHover={{ y: -4, borderColor: "#38bdf8" }}
-            >
-              <p className="text-xs font-semibold text-sky-400">
-                Informe ejecutivo + técnico
-              </p>
-              <p className="mt-2 text-sm text-slate-100">
-                Entregables en formato consultoría, listos para compartir con
-                clientes, auditorías, direcciones TI o comités de riesgo.
-              </p>
-            </motion.div>
-          </div>
-        </motion.section>
-
-        {/* METODOLOGÍA */}
-        <motion.section
-          id="metodologia"
-          className="space-y-6"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          variants={fadeUp}
-        >
-          <h2 className="text-xl font-semibold tracking-tight text-slate-50">
-            Metodología de trabajo
-          </h2>
-
-          <div className="grid gap-5 md:grid-cols-4">
-            {[
-              {
-                title: "1. Relevamiento",
-                desc: "Definimos alcance, dominios y objetivos de negocio de la evaluación.",
-              },
-              {
-                title: "2. Análisis técnico",
-                desc: "Ejecutamos pruebas con herramientas reconocidas y análisis manual experto.",
-              },
-              {
-                title: "3. Informe y riesgos",
-                desc: "Clasificamos hallazgos por criticidad y los alineamos con OWASP / CIS.",
-              },
-              {
-                title: "4. Roadmap",
-                desc: "Proponemos un plan de remediación priorizado, claro y accionable.",
-              },
-            ].map((step, idx) => (
-              <motion.div
-                key={step.title}
-                className="rounded-2xl border border-slate-800 bg-slate-900/60 p-5"
-                variants={fadeUpDelayed(0.1 * idx)}
-              >
-                <p className="text-xs font-semibold text-sky-400">
-                  {step.title}
-                </p>
-                <p className="mt-2 text-sm text-slate-100">{step.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.section>
-
-        {/* PLANES */}
-        <motion.section
-          id="planes"
-          className="space-y-6"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={fadeUp}
-        >
-          <h2 className="text-xl font-semibold tracking-tight text-slate-50">
-            Planes de servicio
-          </h2>
-
-          <div className="grid gap-5 md:grid-cols-3">
-            {/* EXPRESS */}
-            <motion.div
-              className="flex flex-col rounded-2xl border border-slate-800 bg-slate-900/60 p-5"
-              variants={scaleIn}
-              whileHover={{ y: -4, borderColor: "#38bdf8" }}
-            >
-              <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
-                Plan Express
-              </p>
-              <p className="mt-2 text-2xl font-semibold text-slate-50">
-                USD 79
-              </p>
-              <p className="mt-2 text-sm text-slate-300">
-                Revisión única de un sitio con foco en SSL/TLS y cabeceras
-                principales. Informe breve (5–7 páginas).
-              </p>
-            </motion.div>
-
-            {/* PROFESIONAL */}
-            <motion.div
-              className="flex flex-col rounded-2xl border border-sky-500 bg-slate-900 p-5 shadow-lg shadow-sky-500/30"
-              variants={scaleIn}
-              whileHover={{ y: -4, borderColor: "#38bdf8" }}
-            >
-              <p className="text-xs font-semibold uppercase tracking-wide text-sky-400">
-                Plan Profesional
-              </p>
-              <p className="mt-2 text-2xl font-semibold text-slate-50">
-                USD 149
-              </p>
-              <p className="mt-2 text-sm text-slate-300">
-                Auditoría completa: TLS, CSP, DNS, rutas sensibles y reporte
-                ejecutivo + técnico para uso interno o con clientes.
-              </p>
-            </motion.div>
-
-            {/* ENTERPRISE */}
-            <motion.div
-              className="flex flex-col rounded-2xl border border-slate-800 bg-slate-900/60 p-5"
-              variants={scaleIn}
-              whileHover={{ y: -4, borderColor: "#38bdf8" }}
-            >
-              <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
-                Plan Enterprise
-              </p>
-              <p className="mt-2 text-2xl font-semibold text-slate-50">
-                Desde USD 249
-              </p>
-              <p className="mt-2 text-sm text-slate-300">
-                Ideal para múltiples dominios, reporting recurrente, soporte en
-                remediación y acompañamiento en auditorías externas.
-              </p>
-            </motion.div>
-          </div>
-        </motion.section>
-
-        {/* CONTACTO */}
-        <motion.section
-          id="contacto"
-          className="space-y-6 border-t border-slate-800 pt-14"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={fadeUp}
-        >
-          <h2 className="text-2xl font-semibold tracking-tight text-slate-50">
-            Contacto
-          </h2>
-
-          <p className="max-w-2xl text-sm md:text-base text-slate-300 leading-relaxed">
-            ¿Necesitas validar la seguridad externa de tu sitio o preparar un
-            informe profesional para un cliente, auditoría o comité directivo?
-            Escríbenos y coordinamos una evaluación a medida.
-          </p>
-
-          <div className="flex flex-col md:flex-row items-start md:items-center gap-4 text-sm">
-            <a
-              href="https://wa.me/56966440231"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-emerald-500 
-                         px-6 py-3 font-medium text-slate-950 shadow-lg shadow-emerald-500/25 
-                         transition hover:bg-emerald-400 hover:shadow-emerald-400/30"
-            >
-              📱 WhatsApp: +56 9 6644 0231
-            </a>
-
-            <a
-              href="mailto:bitscompany.audits@gmail.com"
-              className="inline-flex items-center justify-center rounded-full border border-slate-600 
-                         px-6 py-3 font-medium text-slate-200 transition 
-                         hover:border-sky-500 hover:text-sky-400"
-            >
-              ✉️ bitscompany.audits@gmail.com
-            </a>
-          </div>
-
-          <p className="text-xs text-slate-500 pt-2">
-            Tiempo de respuesta habitual: 1–3 horas hábiles.
-          </p>
-        </motion.section>
-
-        {/* FOOTER */}
-        <footer className="border-t border-slate-900/80 pt-6 pb-4 text-xs text-slate-500">
-          <div className="flex flex-col items-start justify-between gap-3 md:flex-row md:items-center">
-            <p>
-              © {new Date().getFullYear()} BITS Company. Auditoría &amp;
-              Seguridad.
-            </p>
-            <p className="text-[11px] text-slate-600">
-              Evaluaciones externas de TLS/SSL, cabeceras, CSP y DNS con
-              informes profesionales listos para auditorías y clientes.
-            </p>
-          </div>
-        </footer>
-      </main>
-    </div>
-  );
-}
